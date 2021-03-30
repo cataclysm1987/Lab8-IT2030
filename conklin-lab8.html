@@ -1,0 +1,222 @@
+<html>
+<head>
+<script>
+    
+</script>
+<style>
+   .graybackground {background-color:#DDDDDD;}
+   td {padding:10px; border: 1px solid #ddd;}
+   table {width:40%}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+<h2>Eric Conklin - IT 2320 - Lab 8</h2>
+<form id="lab8Form" action="#" method="post">
+<table>
+    <tr>
+        <td>Full Name </td><td><input type="text" id="fullname"></td>
+	</tr>
+	 <tr class="graybackground">
+        <td colspan="2"><center><strong>Shipping Address</strong></center></td>
+	</tr>
+	<tr>
+		<td>Address </td><td><input type="text" id="shipAddress"></td>
+	</tr>
+	<tr>
+	    <td>City </td><td><input type="text" id="shipCity"></td>
+	</tr>
+   	<tr>
+	    <td>State <select name="state" id="shipState">
+		  <option value="">Select State</option>
+		  <option value="AL">Alabama</option>
+		  <option value="AK">Alaska</option>
+		  <option value="AZ">Arizona</option>
+		  <option value="AR">Arkansas</option>
+		  <option value="CA">California</option>
+		  <option value="CO">Colorado</option>
+		  <option value="CT">Connecticut</option>
+		  <option value="DE">Delaware</option>
+		  <option value="DC">Dist of Columbia</option>
+		  <option value="FL">Florida</option>
+		  <option value="GA">Georgia</option>
+		  <option value="HI">Hawaii</option>
+		  <option value="ID">Idaho</option>
+		  <option value="IL">Illinois</option>
+		  <option value="IN">Indiana</option>
+		  <option value="IA">Iowa</option>
+		  <option value="KS">Kansas</option>
+		  <option value="KY">Kentucky</option>
+		  <option value="LA">Louisiana</option>
+		  <option value="ME">Maine</option>
+		  <option value="MD">Maryland</option>
+		  <option value="MA">Massachusetts</option>
+		  <option value="MI">Michigan</option>
+		  <option value="MN">Minnesota</option>
+		  <option value="MS">Mississippi</option>
+		  <option value="MO">Missouri</option>
+		  <option value="MT">Montana</option>
+		  <option value="NE">Nebraska</option>
+		  <option value="NV">Nevada</option>
+		  <option value="NH">New Hampshire</option>
+		  <option value="NJ">New Jersey</option>
+		  <option value="NM">New Mexico</option>
+		  <option value="NY">New York</option>
+		  <option value="NC">North Carolina</option>
+		  <option value="ND">North Dakota</option>
+		  <option value="OH">Ohio</option>
+		  <option value="OK">Oklahoma</option>
+		  <option value="OR">Oregon</option>
+		  <option value="PA">Pennsylvania</option>
+		  <option value="RI">Rhode Island</option>
+		  <option value="SC">South Carolina</option>
+		  <option value="SD">South Dakota</option>
+		  <option value="TN">Tennessee</option>
+		  <option value="TX">Texas</option>
+		  <option value="UT">Utah</option>
+		  <option value="VT">Vermont</option>
+		  <option value="VA">Virginia</option>
+		  <option value="WA">Washington</option>
+		  <option value="WV">West Virginia</option>
+		  <option value="WI">Wisconsin</option>
+		  <option value="WY">Wyoming</option>
+		  </select></td>
+		<td>ZIP Code <input type="text" id="shipZip"></td>
+	</tr>
+	<tr class="graybackground">
+        <td colspan="2"><center><strong>Billing Address</strong></center></td>
+	</tr>
+		<tr>
+        <td colspan="2"><input type="checkbox" id="useShipAddress" value="Y" /> Use Shipping Address for Billing</td>
+	</tr>
+	<tr>
+		<td>Address </td><td><input type="text" id="billAddress"></td>
+	</tr>
+	<tr>
+	    <td>City </td><td><input type="text" id="billCity"></td>
+	</tr>
+   	<tr>
+	    <td>State <select name="state" id="billState">
+		  <option value="">Select State</option>
+		  <option value="AL">Alabama</option>
+		  <option value="AK">Alaska</option>
+		  <option value="AZ">Arizona</option>
+		  <option value="AR">Arkansas</option>
+		  <option value="CA">California</option>
+		  <option value="CO">Colorado</option>
+		  <option value="CT">Connecticut</option>
+		  <option value="DE">Delaware</option>
+		  <option value="DC">Dist of Columbia</option>
+		  <option value="FL">Florida</option>
+		  <option value="GA">Georgia</option>
+		  <option value="HI">Hawaii</option>
+		  <option value="ID">Idaho</option>
+		  <option value="IL">Illinois</option>
+		  <option value="IN">Indiana</option>
+		  <option value="IA">Iowa</option>
+		  <option value="KS">Kansas</option>
+		  <option value="KY">Kentucky</option>
+		  <option value="LA">Louisiana</option>
+		  <option value="ME">Maine</option>
+		  <option value="MD">Maryland</option>
+		  <option value="MA">Massachusetts</option>
+		  <option value="MI">Michigan</option>
+		  <option value="MN">Minnesota</option>
+		  <option value="MS">Mississippi</option>
+		  <option value="MO">Missouri</option>
+		  <option value="MT">Montana</option>
+		  <option value="NE">Nebraska</option>
+		  <option value="NV">Nevada</option>
+		  <option value="NH">New Hampshire</option>
+		  <option value="NJ">New Jersey</option>
+		  <option value="NM">New Mexico</option>
+		  <option value="NY">New York</option>
+		  <option value="NC">North Carolina</option>
+		  <option value="ND">North Dakota</option>
+		  <option value="OH">Ohio</option>
+		  <option value="OK">Oklahoma</option>
+		  <option value="OR">Oregon</option>
+		  <option value="PA">Pennsylvania</option>
+		  <option value="RI">Rhode Island</option>
+		  <option value="SC">South Carolina</option>
+		  <option value="SD">South Dakota</option>
+		  <option value="TN">Tennessee</option>
+		  <option value="TX">Texas</option>
+		  <option value="UT">Utah</option>
+		  <option value="VT">Vermont</option>
+		  <option value="VA">Virginia</option>
+		  <option value="WA">Washington</option>
+		  <option value="WV">West Virginia</option>
+		  <option value="WI">Wisconsin</option>
+		  <option value="WY">Wyoming</option>
+		  </select></td>
+		<td>ZIP Code <input type="text" id="billZip"></td>
+	</tr>
+		<tr class="graybackground">
+        <td colspan="2"><center><strong>Comment (up to 250 characters)</strong></center></td>
+	</tr>
+	<tr>
+	    <td><strong><span id="msgArea">250 characters<br/>remaining</span></strong></td>
+		<td><textarea id="comment" maxlength="250" rows="5" cols="50"></textarea></td>
+		<tr>
+		   <td><input type="reset" id="reset" name="reset" value="Reset"></td>
+           <td><input type="submit" id="submit" name="submit" value="Submit"></td>
+		</tr>
+	</tr>
+</table>
+</form>
+<script>
+	//Register form functions here with document.ready
+	$(document).ready(function(){
+		//1. After someone types in the Full Name field, when they exit the field, convert the name to ALL CAPS
+		$("#fullname").focusout(function(i, val){
+			var value = $("#fullname").val();
+			$("#fullname").val(value.toUpperCase());
+		});
+		//2. After someone has entered in the Shipping Address, if they check the box that says to Use the Shipping address for the Billing address, copy the data from the Shipping fields into the Billing fields and disable the Billing fields so they cannot be altered.
+		//If after that they uncheck the box that says Use the Shipping address for the Billing address, them make those fields active. You should clear out the data when you make them active.
+		$("#useShipAddress").change(function(){
+			if ($("#useShipAddress").is(":checked")){
+				copyShippingInfo();
+			} else {
+				unlockShippingInfo();
+			}
+		});
+
+		function copyShippingInfo(){
+			$("#billAddress").val($("#shipAddress").val());
+			$("#billAddress").prop('disabled', true);
+			$("#billCity").val($("#shipCity").val());
+			$("#billCity").prop('disabled', true);
+			$("#billState").val($("#shipState").val());
+			$("#billState").prop('disabled', true);
+			$("#billZip").val($("#shipZip").val());
+			$("#billZip").prop('disabled', true);
+		}
+
+		function unlockShippingInfo(){
+			$("#billAddress").prop('disabled', false);
+			$("#billAddress").val("");
+			$("#billCity").prop('disabled', false);
+			$("#billCity").val("");
+			$("#billState").prop('disabled', false);
+			$("#billState").val("");
+			$("#billZip").prop('disabled', false);
+			$("#billZip").val("");
+		}
+		//3. As the user types into the Comment field, show how many characters are remaining to reach the limit of 250. The message area is to the left of the text area field. (3 points)
+		$("#comment").keyup(function(){
+			var length = 250 - $("#comment").val().length;
+			$("#msgArea").html(length + " characters<br/>remaining");
+		});
+
+		$("#comment").focusout(function(){
+			var length = 250 - $("#comment").val().length;
+			$("#msgArea").html(length + " characters<br/>remaining");
+		});
+
+	});
+</script>
+</body>
+
+</html>
